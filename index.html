@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
     <title>Document</title>
   </head>
   <body>
@@ -17,6 +18,38 @@
           <div><a href="#">contact</a></div>
         </nav>
       </div>
+      <div class="slider">
+        <div class="swiper mySlider">
+          <div class="swiper-wrapper    ">
+            <div class="swiper-slide"><img src="./img/cat.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/jungle.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/snow.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/snow2.jpg" alt=""></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
     </main>
+    <script src="./swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySlider", {
+        spaceBetween: 0,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
